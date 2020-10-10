@@ -1,29 +1,8 @@
 require 'dotenv/load'
-require 'base64'
-require 'faraday'
-require 'json'
 require 'pixela'
+require './toggl'
 
-class Toggl
-  def initialize(token)
-    @token = token
-  end
-
-  def summary(user_agent, workspace_id, since, _until)
-    url = 'https://api.track.toggl.com/reports/api/v2/summary'
-    params = {
-      user_agent: user_agent,
-      workspace_id: workspace_id,
-      since: since,
-      until: _until
-    }
-    headers = { 'Authorization' => "Basic #{Base64.encode64(@token + ':api_token')}" }
-    res = Faraday.get(url, params, headers)
-    JSON.parse(res.body)
-  end
-end
-
-date = Date.today
+date = Date.today - 1
 
 toggl = Toggl.new(ENV['TOGGL_API_TOKEN'])
 summary = toggl.summary('toggl_to_pixela', ENV['TOGGL_WORKSPACE_ID'], date, date)
