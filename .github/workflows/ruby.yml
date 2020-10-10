@@ -24,12 +24,12 @@ jobs:
       uses: ruby/setup-ruby@ec106b438a1ff6ff109590de34ddc62c540232e0
       with:
         ruby-version: 2.7
-    #- name: Install dependencies
-    #  run: bundle install
+    - name: Install dependencies
+      run: bundle install
     - name: Run script
       env:
         TOGGL_API_TOKEN: ${{ secrets.TOGGL_API_TOKEN }}
         TOGGL_WORKSPACE_ID: ${{ secrets.TOGGL_WORKSPACE_ID }}
         PIXELA_USERNAME: ${{ secrets.PIXELA_USERNAME }}
         PIXELA_TOKEN: ${{ secrets.PIXELA_TOKEN }}
-      run: ruby app.rb
+      run: bundle exec ruby app.rb
