@@ -28,5 +28,5 @@ jobs:
     #  run: bundle install
     - name: Run script
       env:
-        HOGE: ok
+        HOGE: ${{ secrets.HOGE }}
       run: ruby app.rb
