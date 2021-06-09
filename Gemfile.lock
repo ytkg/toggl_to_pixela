@@ -36,6 +36,7 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.10.0)
     rspec-support (3.10.2)
+    timecop (0.9.4)
     webmock (3.13.0)
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
@@ -49,6 +50,7 @@ DEPENDENCIES
   faraday
   pixela
   rspec
+  timecop
   webmock
 
 BUNDLED WITH
