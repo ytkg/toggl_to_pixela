@@ -10,3 +10,5 @@ gem 'pixela'
 gem 'rspec'
 gem 'webmock'
 gem 'timecop'
+gem 'rubocop', require: false
+gem 'rubocop-rspec', require: false

@@ -1,0 +1,19 @@
+require: rubocop-rspec
+
+AllCops:
+  NewCops: enable
+
+Style/Documentation:
+  Enabled: false
+
+Style/BlockComments:
+  Enabled: false
+
+Style/NumericLiterals:
+  Enabled: false
+
+Style/AccessModifierDeclarations:
+  Enabled: false
+
+RSpec/MultipleExpectations:
+  Enabled: false
