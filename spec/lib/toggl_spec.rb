@@ -1,4 +1,4 @@
-require './toggl'
+require './lib/toggl'
 
 RSpec.describe Toggl do
   describe '#summary' do

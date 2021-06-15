@@ -1,6 +1,6 @@
 require 'dotenv/load'
 require 'pixela'
-require './toggl'
+require './lib/toggl'
 
 module App
   module_function def run
