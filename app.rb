@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'dotenv/load'
 require 'pixela'
 require './lib/toggl'
@@ -18,6 +20,4 @@ module App
   end
 end
 
-if __FILE__ == $0
-  App.run
-end
+App.run if __FILE__ == $PROGRAM_NAME

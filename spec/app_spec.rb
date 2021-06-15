@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require './app'
 
 RSpec.describe App do
@@ -21,12 +23,12 @@ RSpec.describe App do
       Timecop.return
     end
 
-    subject { App.run }
-
     it do
-      subject
-      expect(toggl).to have_received(:summary).with('toggl_to_pixela', '4489930', Date.parse('2021-06-05'), Date.parse('2021-06-05')).once
-      expect(pixela_client).to have_received(:create_pixel).with(date: Date.parse('2021-06-05'), graph_id: 'task-durations', quantity: 117).once
+      described_class.run
+      expect(toggl).to have_received(:summary).with('toggl_to_pixela', '4489930', Date.parse('2021-06-05'),
+                                                    Date.parse('2021-06-05')).once
+      expect(pixela_client).to have_received(:create_pixel).with(date: Date.parse('2021-06-05'),
+                                                                 graph_id: 'task-durations', quantity: 117).once
     end
   end
 end
