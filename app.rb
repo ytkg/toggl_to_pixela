@@ -9,7 +9,8 @@ module App
     date = Date.today - 1
 
     toggl = Toggl.new(ENV['TOGGL_API_TOKEN'])
-    summary = toggl.summary('toggl_to_pixela', ENV['TOGGL_WORKSPACE_ID'], date, date)
+    project_ids = ENV['TOGGL_PROJECT_IDS']
+    summary = toggl.summary('toggl_to_pixela', ENV['TOGGL_WORKSPACE_ID'], date, date, project_ids)
 
     exit if summary['total_grand'].nil?
 
