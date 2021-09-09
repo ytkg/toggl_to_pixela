@@ -23,5 +23,6 @@ bundle exec ruby app.rb
 [Settings] -> [Sectets]に以下を登録
 - TOGGL_API_TOKEN: Togglのtoken
 - TOGGL_WORKSPACE_ID: Togglのworkspace id
+- TOGGL_PROJECT_IDS： Togglの取得対象のプロジェクトのID
 - PIXELA_USERNAME: Pixelaのusername
 - PIXELA_TOKEN: Pixelaのtoken
