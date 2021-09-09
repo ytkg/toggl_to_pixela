@@ -17,7 +17,7 @@ module App
     minutes = summary['total_grand'] / 1000 / 60
 
     client = Pixela::Client.new(username: ENV['PIXELA_USERNAME'], token: ENV['PIXELA_TOKEN'])
-    client.create_pixel(graph_id: 'task-durations', date: date, quantity: minutes)
+    client.update_pixel(graph_id: 'task-durations', date: date, quantity: minutes)
   end
 end
 
