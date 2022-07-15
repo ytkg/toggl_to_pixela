@@ -7,7 +7,7 @@ require './lib/toggl'
 module App
   module_function def run
     %w/TOGGL_API_TOKEN TOGGL_WORKSPACE_ID PIXELA_USERNAME PIXELA_TOKEN/.each do |environment_variable_name|
-      raise "Missing required environment variable #{environment_variable_name}" if ENV[environment_variable_name].nil?
+      raise "Missing required environment variable #{environment_variable_name}" if ENV[environment_variable_name].to_s.empty?
     end
 
     date = Date.today - 1
