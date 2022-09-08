@@ -20,7 +20,7 @@ bundle exec ruby app.rb
 ```
 ### GitHub Actionsの場合
 #### 環境変数の設定
-[Settings] -> [Sectets]に以下を登録
+[Settings] -> [Secrets]に以下を登録
 - TOGGL_API_TOKEN: Togglのtoken
 - TOGGL_WORKSPACE_ID: Togglのworkspace id
 - PIXELA_USERNAME: Pixelaのusername
